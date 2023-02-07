@@ -1,1 +1,19 @@
-
+pipeline {
+   agent any
+   stages {
+       stage('Checkout Stage') {
+           steps {
+               sh """
+               echo "This is checkout stage"
+               """
+           }
+       }
+      stage('build stage') {
+          steps {
+               sh """
+               echo "this is build stage"
+               """
+          }
+      }
+   }
+}
